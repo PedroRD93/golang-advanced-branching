@@ -116,10 +116,8 @@ func generateRatings() {
 				vehResult.feedbackTotal++
 
 				for _, word := range text {
-					s := strings.ToLower(word)
-					s = strings.Trim(s, ".,;:!?")
 
-					switch s {
+					switch s := strings.Trim(strings.ToLower(word), ".,;:!?"); s {
 					case "pleasure", "impressed", "wonderful", "fantastic", "splendid":
 						vehRating += extraPositive
 					case "help", "helpful", "thanks", "thank you", "happy":
