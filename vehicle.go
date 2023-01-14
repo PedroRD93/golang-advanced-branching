@@ -103,7 +103,7 @@ func readJSONFile() Values {
 	return content
 }
 
-func generateRatings() {
+func generateRating() {
 	f := readJSONFile()
 
 	for _, v := range f.Models {
